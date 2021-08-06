@@ -14,7 +14,7 @@ export const Nav = styled.nav`
 `
 
 export const NavLink = styled(Link)`
-    color: #e5e5e5;
+    color: #b2b2b2; 
     display: flex;
     align-items: center;
     text-decoration: none; // Check this later
@@ -53,5 +53,6 @@ export const NavLikes = styled.div`
 
 export const Star = styled(AiFillStar)`
     color: #F8E71C;
+    cursor: pointer;
 `
 

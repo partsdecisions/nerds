@@ -1,0 +1,13 @@
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    padding: 50px 250px 50px 250px;
+    gap: 40px;
+    text-align: start;
+    background-color: #1D1D1D;
+}
+
+.movie-poster {
+    width: 182px;
+    height: 268px;
+}
