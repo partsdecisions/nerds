@@ -12,6 +12,8 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [likes, setLikes] = useState(0);
   const [search, setSearch] = useState('');
+  const [alphabetSort, setAlphabetSort] = useState('None');
+  const [ratingSort, setRatingSort] = useState('None');
 
   // useEffect will run this code on page render
   useEffect(() => {
@@ -39,10 +41,14 @@ function App() {
         <Header/>
         <Sidebar
           setSearch={setSearch}
+          setAlphabetSort={setAlphabetSort}
+          setRatingSort={setRatingSort}
         />
         <Movies
           movies={movies}
           search={search}
+          alphabetSort={alphabetSort}
+          ratingSort={ratingSort}
         />
       </div>
     </Router>
