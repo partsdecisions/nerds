@@ -1,6 +1,8 @@
 import Header from "./components/Header/Header";
 import Movies from "./components/Movies/Movies";
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
     getMovies();
   }, [])
 
+  // Fetchin Movies from json server
   const fetchMovies = async () => {
     const res = await fetch('http://localhost:5000/data');
     const data = await res.json();
@@ -30,10 +33,12 @@ function App() {
 
 
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
         <Header/>
-        
-    </div>
+      </div>
+    </Router>
+    
   );
 }
 
