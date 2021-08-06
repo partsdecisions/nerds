@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import Movies from "./components/Movies/Movies";
+import Sidebar from "./components/Sidebar/Sidebar";
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
@@ -10,7 +11,7 @@ function App() {
   // State variables holding movies & likes
   const [movies, setMovies] = useState([]);
   const [likes, setLikes] = useState(0);
-
+  const [search, setSearch] = useState('');
 
   // useEffect will run this code on page render
   useEffect(() => {
@@ -30,14 +31,18 @@ function App() {
     return data;
   }
 
-
+  
 
   return (
     <Router>
       <div className="App">
         <Header/>
+        <Sidebar
+          setSearch={setSearch}
+        />
         <Movies
           movies={movies}
+          search={search}
         />
       </div>
     </Router>

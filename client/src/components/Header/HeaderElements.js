@@ -9,7 +9,9 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    /* padding: 1em; */
+    padding: 20px 250px;
+    position: relative;
 
 `
 
@@ -18,28 +20,35 @@ export const NavLink = styled(Link)`
     display: flex;
     align-items: center;
     text-decoration: none; // Check this later
-    padding: 0.5em;
+    /* padding: 0.5em; */
+    margin-right:  20px;
     height: 100%;
     cursor: pointer;
 
     &.active {
         color: #ffffff;
+        border-bottom: 6px solid #E50914;
     }
 `
 export const NavLogo = styled.div`
     color: #e5e5e5;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     text-decoration: none; // Check this later
     padding: 0.5em;
     height: 100%;
     cursor: pointer;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    display: block;
+    
 `
 
 export const NavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-left: 100px;
+    /* margin-left: 100px; */
 
     @media screen and (max-width: 768px) {
         

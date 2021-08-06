@@ -1,11 +1,17 @@
 import Movie from '../Movie/Movie';
 import './Movies.css';
 
-const Movies = ( {movies} ) => {
+const Movies = ( {movies, search} ) => {
     return (
         <div className="movie-container">
             {
-                movies.map((movie, index) => (
+                movies.filter((movie) => {
+                    if (search == "") {
+                        return movie;
+                    } else if (movie.title.toLowerCase().includes(search.toLowerCase())) {
+                        return movie;
+                    }
+                }).map((movie, index) => (
                     <Movie
                         key={index}
                         rating={movie.rating}
