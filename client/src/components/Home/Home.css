@@ -1,0 +1,9 @@
+.home-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-main h2 {
+    color: white;
+}

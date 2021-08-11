@@ -1,9 +1,10 @@
 import Movie from '../Movie/Movie';
 import './Movies.css';
 
-const Movies = ( {movies, search, alphabetSort, ratingSort} ) => {
+const Movies = ({ movies, search, alphabetSort, ratingSort, setLikes, likes }) => {
 
     console.log(movies);
+
     const sortMovies = () => {
         if (alphabetSort === "a-z") {
             movies.sort(compareTitle);
@@ -13,6 +14,7 @@ const Movies = ( {movies, search, alphabetSort, ratingSort} ) => {
             return movies;
         }
     }
+
     const sortMoviesRating = () => {
         if (ratingSort === "10-1") {
             movies.sort(compareRating);
@@ -22,7 +24,6 @@ const Movies = ( {movies, search, alphabetSort, ratingSort} ) => {
             return movies;
         }
     }
-
 
     function compareTitle(a, b) {
         if (a.title < b.title){
@@ -63,6 +64,8 @@ const Movies = ( {movies, search, alphabetSort, ratingSort} ) => {
                         title={movie.title}
                         year={movie.year}
                         poster={movie.urlPoster}
+                        setLikes={setLikes}
+                        likes={likes}
                     />
                 ))
             }

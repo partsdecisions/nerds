@@ -1,8 +1,10 @@
 import Header from "./components/Header/Header";
 import Movies from "./components/Movies/Movies";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Series from "./components/Series/Series";
+import Home from "./components/Home/Home";
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 
@@ -38,18 +40,26 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header/>
-        <Sidebar
-          setSearch={setSearch}
-          setAlphabetSort={setAlphabetSort}
-          setRatingSort={setRatingSort}
+        <Header
+          likes={likes}
         />
-        <Movies
-          movies={movies}
-          search={search}
-          alphabetSort={alphabetSort}
-          ratingSort={ratingSort}
-        />
+        <Route path="/" exact component={Home}/>
+        <Route path="/movies"> 
+          <Sidebar
+            setSearch={setSearch}
+            setAlphabetSort={setAlphabetSort}
+            setRatingSort={setRatingSort}
+          />
+          <Movies
+            movies={movies}
+            search={search}
+            alphabetSort={alphabetSort}
+            ratingSort={ratingSort}
+            setLikes={setLikes}
+            likes={likes}
+         />
+        </Route>
+        <Route path="/series" component={Series}/>
       </div>
     </Router>
     

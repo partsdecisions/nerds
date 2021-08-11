@@ -1,13 +1,14 @@
 import { Nav, NavLink, NavMenu, NavLogo, NavLikes, Star, Logo } from './HeaderElements';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ likes }) => {
+
     return (
         <>
             <Nav>
                 <NavMenu>
-                    <NavLink to="/homepage" activeStyle>
-                        Homepage
+                    <NavLink to="/" exact activeStyle>
+                        Home
                     </NavLink>
                     <NavLink to="/series" activeStyle>
                         Series
@@ -21,6 +22,7 @@ const Header = () => {
                 </NavLogo>
                 <NavLikes>
                     <Star/>
+                    <div style={{color: 'white', marginLeft: '5px'}}>{likes}</div>
                 </NavLikes>
             </Nav>  
         </>

@@ -5,14 +5,12 @@
 #alphabet {
     background-color: #FFFFFF;
     opacity: 50%;
-    /* color: white; */
     width: 100%;
     padding: 0.8em;
     border-style: none;
     border-bottom: solid #2E2E2E 1px;
     outline: none;
     border-width: 1px;
-    /* border-color: #2E2E2E; */
     border-radius: 6px;
     border-style: solid;
 }
@@ -20,14 +18,12 @@
 #rating {
     background-color: #FFFFFF;
     opacity: 50%;
-    /* color: white; */
     width: 100%;
     padding: 0.8em;
     border-style: none;
     border-bottom: solid #2E2E2E 1px;
     outline: none;
     border-width: 1px;
-    /* border-color: #2E2E2E; */
     border-radius: 6px;
     border-style: solid;
 }
@@ -59,14 +55,12 @@
 .search-bar {
     background-color: #FFFFFF;
     opacity: 50%;
-    /* color: white; */
     width: 100%;
     padding: 0.8em;
     border-style: none;
     border-bottom: solid #2E2E2E 1px;
     outline: none;
     border-width: 1px;
-    /* border-color: #2E2E2E; */
     border-radius: 6px;
     border-style: solid;
 }
@@ -95,5 +89,73 @@
 .sidebar-sort-alphabet {
     margin-right: 20px;
 }
+
+@media only screen and (max-width: 1200px){
+
+    .sidebar-main {
+        padding: 20px 100px;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    .sidebar-main {
+        padding: 20px 50px;
+    }
+
+}
+
+@media only screen and (max-width: 468px) {
+
+    .sidebar-activities {
+        flex-wrap: wrap;
+    }
+
+    .sidebar-search {
+        width: 100%;
+    }
+
+    .search-form div{
+        width: 100%;
+    }
+
+    .sidebar-sort {
+        margin-top: 10px;
+    }
+
+    .sidebar-sort-alphabet {
+        margin: 0;
+    }
+
+    .sort-text {
+        display: none;
+    }
+
+    .sidebar-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-sort {
+        width: 100%;
+    }
+
+    .sidebar-sort-alphabet {
+        width: 100%;
+    }
+
+    .sidebar-sort-rating {
+        width: 100%;
+    }
+
+    .sidebar-main {
+        padding-bottom: 40px;
+    }
+
+}
+
 
 

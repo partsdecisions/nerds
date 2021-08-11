@@ -9,6 +9,12 @@
     transition: 100ms;
 }
 
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    width: 182px;
+}
+
 .movie-details h4 {
     color: #FFFFFF;
     font-size: 14px;
@@ -19,16 +25,47 @@
     opacity: 50%;
 }
 
-/* .overlay {
-    width: 182px;
-    height: 286px;
+.movie-poster {
     display: flex;
-    flex-direction: column;
     position: relative;
-    top: -350px;
-} */
+}
+
+.overlay {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: none;
+    opacity: 80%;
+    position: absolute;
+} 
+
+.movie-main:hover .overlay{
+    display: flex;
+}
+
 
 .movie-star {
     margin-top: 5px;
     margin-right: 5px;
 }
+
+.movie-main {
+    
+}
+
+.rating-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.rating-text h3 {
+    font-weight: 300;
+    font-size: 52px;
+}
+

@@ -13,7 +13,7 @@ const Sidebar = ({ setSearch, setAlphabetSort, setRatingSort }) => {
                 <div>
                     <h1> Movies </h1>
                 </div>
-                <div>
+                <div className="sort-text">
                     <h2> Sort by: </h2>
                 </div>
             </div>
@@ -23,9 +23,6 @@ const Sidebar = ({ setSearch, setAlphabetSort, setRatingSort }) => {
                         <div>
                             <input className="search-bar" type="text" placeholder="Search for a title"  onChange={updateSearch} required/>
                         </div>
-                        {/* <div className="icon">
-                            <AiOutlineSearch id="search-icon"/>
-                        </div>   */}
                     </form>
                 </div>
                 <div className="sidebar-sort">
